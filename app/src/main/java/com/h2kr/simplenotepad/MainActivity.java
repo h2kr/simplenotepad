@@ -43,17 +43,14 @@ public class MainActivity extends AppCompatActivity implements NoteEventListeren
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        //инит блеат рекюклевиев сорре за онглиский
+        
         recyclerView = findViewById(R.id.notes_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //инит фап батон (пачему так называеца низнаю но вот так вот прастите миня)
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab =  findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: 13/05/2018  add new note
                 onAddNewNote();
             }
         });
